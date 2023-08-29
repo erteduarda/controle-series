@@ -20,7 +20,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/series', SeriesController::class)
-    ->only(['index', 'create', 'store']);
+    ->only(['index', 'create', 'store', 'edit']);
 
 Route::post('/series/destroy/{series}', [SeriesController::class, 'destroy'])
     ->name('series.destroy');
